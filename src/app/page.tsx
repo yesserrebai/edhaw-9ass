@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import LocationPrompt from '../components/LocationPrompt';
-import TimeSelector from '../components/TimeSelector';
+import OutageButton from '../components/OutageButton';
 import ReportChart from '../components/ReportChart';
 import ReportTable from '../components/ReportTable';
 
@@ -27,7 +27,7 @@ export default function HomePage() {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Edhaw 9as</h1>
       <LocationPrompt onLocationSet={setLocation} />
-      {location && <TimeSelector onSelect={submitReport} />}
+      {location && <OutageButton onSelect={submitReport} />}
       <ReportChart reports={reports} />
       <ReportTable reports={reports} />
     </div>
