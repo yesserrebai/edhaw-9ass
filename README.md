@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+⚡ Edhaw-9ass – Report Electricity Outages
 
-## Getting Started
+This project is part of the #DoSomethingForYourCountry initiative.
+It is free, open-source, and created with the purpose of building tools that solve real problems in our country.
 
-First, run the development server:
+🌍 About the Initiative
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#DoSomethingForYourCountry is an open environment where developers can collaborate to create impactful tools for their communities. The belief is simple:
+👉 If we don’t build these tools ourselves, nobody will.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔌 Project: Edhaw-9ass
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edhaw-9ass is a reporting tool for electricity outages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Users can report a power outage with a single button.
+The tool automatically captures the user’s current address.
+All reports are displayed in a table and chart, making it easy to track the number of shutdowns across regions.
+This creates a simple but effective way for citizens to highlight recurring electricity issues.
 
-## Learn More
+👩‍💻 Why Contribute?
 
-To learn more about Next.js, take a look at the following resources:
+For Juniors:
+Learn coding by contributing to a real project.
+Get familiar with open-source collaboration.
+Build confidence by seeing your work go live.
+For Seniors:
+Apply your skills to real community problems.
+Mentor juniors and strengthen the developer ecosystem.
+Leave a lasting impact by contributing tools that matter.
+🚀 Our Goal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To build a community of developers working together on tools that serve the country. Starting with Edhaw-9ass, we aim to create many more open-source solutions that address everyday challenges.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💡 How to Contribute
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fork this repo & set it up locally.
+Check open issues or propose new features.
+Submit a pull request.
+Improve the codebase, UX, or documentation.
+✊ Join the Movement
+This is more than just a project—it’s a call to action.
+Contribute, share, and help grow the #DoSomethingForYourCountry community.
