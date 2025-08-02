@@ -1,0 +1,37 @@
+{
+  "app": {
+    "title": "Edhaw 9as",
+    "description": "Electricity outage reporting application in Tunisia"
+  },
+  "location": {
+    "requesting": "Requesting your location...",
+    "error": "Error retrieving location",
+    "geocodingError": "Error retrieving address"
+  },
+  "outage": {
+    "reportButton": "Report an Outage",
+    "selectTime": "Select outage time",
+    "now": "Now",
+    "recent": "Recently (1-2h)",
+    "earlier": "Earlier (3-6h)",
+    "muchEarlier": "Much earlier (>6h)"
+  },
+  "reports": {
+    "title": "Outage Reports",
+    "noReports": "No reports yet",
+    "table": {
+      "time": "Time",
+      "category": "Category",
+      "address": "Address",
+      "coordinates": "Coordinates"
+    }
+  },
+  "chart": {
+    "title": "Outage Statistics",
+    "noData": "No data available"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  }
+}

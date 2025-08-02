@@ -1,0 +1,37 @@
+{
+  "app": {
+    "title": "Edhaw 9as",
+    "description": "Application de signalement de coupures d'électricité en Tunisie"
+  },
+  "location": {
+    "requesting": "Demande de votre localisation...",
+    "error": "Erreur lors de la récupération de la localisation",
+    "geocodingError": "Erreur lors de la récupération de l'adresse"
+  },
+  "outage": {
+    "reportButton": "Signaler une Coupure",
+    "selectTime": "Sélectionner l'heure de la coupure",
+    "now": "Maintenant",
+    "recent": "Récemment (1-2h)",
+    "earlier": "Plus tôt (3-6h)",
+    "muchEarlier": "Beaucoup plus tôt (>6h)"
+  },
+  "reports": {
+    "title": "Rapports de Coupures",
+    "noReports": "Aucun rapport pour le moment",
+    "table": {
+      "time": "Heure",
+      "category": "Catégorie",
+      "address": "Adresse",
+      "coordinates": "Coordonnées"
+    }
+  },
+  "chart": {
+    "title": "Statistiques des Coupures",
+    "noData": "Aucune donnée disponible"
+  },
+  "theme": {
+    "switchToDark": "Passer au mode sombre",
+    "switchToLight": "Passer au mode clair"
+  }
+}
