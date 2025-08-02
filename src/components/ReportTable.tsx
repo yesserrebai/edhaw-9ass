@@ -15,7 +15,7 @@ export default function ReportTable({ reports }: ReportTableProps) {
     <div>
       <h2 className="text-lg font-semibold mb-2">Reports by Location</h2>
       <table className="min-w-full border text-sm">
-        <thead className="bg-gray-100">
+        <thead className="bg-gray-100 text-black">
           <tr>
             <th className="border px-4 py-2 text-left">Time</th>
             <th className="border px-4 py-2 text-left">Location</th>
