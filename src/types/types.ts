@@ -1,11 +1,11 @@
 export interface Location {
-  city: string;
-  region: string;
-  postCode: string;
+  latitude: number;
+  longitude: number;
+  address: string;
 }
 
 export interface Report {
   timestamp: string;
-  timeCategory: "now" | "<1h" | ">1h";
+  timeCategory: 'now' | 'recent' | 'earlier' | 'muchEarlier';
   location: Location;
 }
