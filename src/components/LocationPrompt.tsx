@@ -10,8 +10,13 @@ interface Props {
 }
 export default function LocationPrompt({ onLocationSet, location}: Props) {
     const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    if (!navigator.geolocation) {
+        setError("Geolocation not supported");
+        return;
+    }
     navigator.geolocation.getCurrentPosition(async (pos) => {
       const { latitude, longitude } = pos.coords;
       try {
@@ -29,11 +34,17 @@ export default function LocationPrompt({ onLocationSet, location}: Props) {
         console.log('Failed to reverse geocode:', err);
         setError('Failed to retrieve location');
       }
+      finally{
+        setLoading(false);
+      }
     }, (err) => {
         if (err.code !== err.PERMISSION_DENIED) {
         console.error('Geolocation error:', err);
         setError('Failed to retrieve location');
       }
+      setLoading(false);
+    },{
+      maximumAge: 60000,
     });
   }, [onLocationSet]);
 
@@ -51,9 +62,9 @@ export default function LocationPrompt({ onLocationSet, location}: Props) {
       </p>
       </div>
     );
-  } else if (!error) {
+  } else if (!error && !loading) {
     locationContent = (
-      <div className="flex flex-col items-start gap-2 bg-white p-4 rounded shadow md:w-[50em]">
+      <div className="flex flex-col items-start gap-2 bg-white p-4 rounded shadow md:w-[40em]">
         <p>
           <strong>⚠️ Location access needed:</strong> Please enable location permissions in your browser.
         </p>
@@ -62,14 +73,18 @@ export default function LocationPrompt({ onLocationSet, location}: Props) {
         </p>
       </div>
     );
-  } else {
-    locationContent = <p>Failed to retrieve location</p>;
+  }
+  if (loading) {
+    locationContent = (
+      <div className="flex items-center justify-center h-16">
+        <span className="text-gray-500">Loading location...</span>
+      </div>
+    );
   }
 
   return (
     <div className="mb-4 text-sm text-gray-600">
-      {error && <div className="text-red-500 mb-4">{error}</div>}
-      {locationContent}
+      {error ? <div className="text-red-500 mb-4">{error}</div> : locationContent}
     </div>
   );
 }

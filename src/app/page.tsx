@@ -46,41 +46,52 @@ export default function HomePage() {
   }
 
   return (
-    <div className="container mx-auto p-4 bg-white dark:bg-gray-900 text-black dark:text-white">
+    <div className="container mx-auto py-4 px-7 bg-white dark:bg-gray-900 text-black dark:text-white">
       <div className='flex justify-between mb-[25px] border-b border-gray-700 dark:border-gray-200 pb-2'>
-      <h1 className="text-2xl font-bold pt-2">
-       Edhaw 9as
-      </h1>
-      <div className="flex items-center gap-4">
-        <div className="flex items-center text-sm px-4 py-2 rounded-4xl bg-white p-2 border dark:text-black group transition-all duration-300">
-            Edhaw yekhdem 3ana 😎 <span
-              className="ml-2 flex items-center transition-all duration-300 group-hover:scale-x-110 group-hover:translate-x-2 group-hover:text-gray-400"
-              style={{ transformOrigin: 'right' }}
-            >
-              {'>'}
-            </span>
+        <h1 className="md:text-2xl font-bold pt-3 md:pt-2">
+        Edhaw 9as
+        </h1>
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center text-sm px-4 py-2 rounded-4xl bg-white p-2 border dark:text-black group transition-all duration-300">
+              Edhaw yekhdem 3ana 😎 <span
+                className="ml-2 flex items-center transition-all duration-300 group-hover:scale-x-110 group-hover:translate-x-2 group-hover:text-gray-400"
+                style={{ transformOrigin: 'right' }}
+              >
+                {'>'}
+              </span>
+          </div>
+          <button
+            type="button"
+            aria-label="Power"
+            onClick={togglePower}
+            className="focus:outline-none"
+          >
+            {theme === 'light' ? (
+          <LightSwitchOn size={48} className="hover:opacity-80" />
+            ) : (
+          <LightSwitchOff size={48} className="hover:opacity-80" />
+            )}
+          </button>
         </div>
-        <button
-          type="button"
-          aria-label="Power"
-          onClick={togglePower}
-          className="focus:outline-none"
-        >
-          {theme === 'light' ? (
-        <LightSwitchOn size={48} className="hover:opacity-80" />
-          ) : (
-        <LightSwitchOff size={48} className="hover:opacity-80" />
-          )}
-        </button>
       </div>
-      </div>
-      <LocationPrompt onLocationSet={setLocation} location={location} />
-      {location && <OutageButton onSelect={submitReport} />}
-      <div className="flex flex-col md:flex-row mb-8">
-        <ReportChart reports={reports} />
-        <LocationsPieCharts reports={reports} />
-      </div>
-      <ReportTable reports={reports} />
+      <div className='flex flex-col items-start'>
+        <div className='mb-4 '>
+        <LocationPrompt onLocationSet={setLocation} location={location} />
+        {location && <OutageButton onSelect={submitReport} />}
+        </div>
+        {
+           (reports.length === 0) ? (
+              <h2 className="text-lg font-semibold mb-4 text-center">No reports available</h2>
+          ) :
+          <>
+           <div className="flex gap-8 md:gap-44 flex-col md:flex-row mb-4"> 
+            <ReportChart reports={reports} />
+            <LocationsPieCharts reports={reports} />
+          </div>
+          <ReportTable reports={reports} />
+          </>
+        }
+    </div>
     </div>
   );
 }

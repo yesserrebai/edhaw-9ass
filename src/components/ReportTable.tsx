@@ -12,7 +12,7 @@ export default function ReportTable({ reports }: ReportTableProps) {
   const sorted = [...filtered].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
   return (
-    <div>
+    <div className="w-full max-w-4xl mr-auto mt-2">
       <h2 className="text-lg font-semibold mb-2">Reports by Location</h2>
       <table className="min-w-full border text-sm">
         <thead className="bg-gray-100 text-black">

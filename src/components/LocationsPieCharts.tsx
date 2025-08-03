@@ -30,9 +30,8 @@ export default function ReportChart({ reports }: ReportChartProps) {
       data: sortedData.slice(-3),
     };
   }, [reports]);
-
   return (
-    <div className="mb-8 w-[22em] ml-[7em] md:ml-auto flex flex-col items-center md:items-center">
+    <div className="max-w-[20em] md:ml-auto flex flex-col items-start md:items-center">
       <h2 className="text-lg font-semibold mb-4 text-center">Most reported regions</h2>
       <Pie
         data={{
