@@ -47,21 +47,18 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto p-4 bg-white dark:bg-gray-900 text-black dark:text-white">
-      <div className='flex justify-between mb-[50px] border-b border-gray-700 dark:border-gray-200 pb-2'>
+      <div className='flex justify-between mb-[25px] border-b border-gray-700 dark:border-gray-200 pb-2'>
       <h1 className="text-2xl font-bold pt-2">
        Edhaw 9as
       </h1>
       <div className="flex items-center gap-4">
         <div className="flex items-center text-sm px-4 py-2 rounded-4xl bg-white p-2 border dark:text-black group transition-all duration-300">
-          <>
-            Edhaw yekhdem 3ana 😎
-            <span
+            Edhaw yekhdem 3ana 😎 <span
               className="ml-2 flex items-center transition-all duration-300 group-hover:scale-x-110 group-hover:translate-x-2 group-hover:text-gray-400"
               style={{ transformOrigin: 'right' }}
             >
               {'>'}
             </span>
-          </>
         </div>
         <button
           type="button"
