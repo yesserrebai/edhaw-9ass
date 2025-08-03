@@ -40,7 +40,7 @@ export default function LocationPrompt({ onLocationSet, location}: Props) {
   let locationContent;
   if (location) {
     locationContent = (
-      <div className="flex flex-col items-start gap-2 bg-white p-4 rounded shadow md:w-[50em]">
+      <div className="flex flex-col items-start gap-2 dark:bg-white bg-gray-200 text-black p-4 rounded shadow md:w-[50em]">
       <p>
         <strong>📍 Location detected:</strong>
       </p>
