@@ -49,8 +49,8 @@ export default function ReportChart({ reports }: ReportChartProps) {
   }, [reports]);
 
   return (
-    <div className="mb-8">
-      <h2 className="text-lg font-semibold mb-2">Reports in the Last 24 Hours</h2>
+    <div className="w-[20em] md:w-[40em]">
+      <h2 className="text-lg font-semibold mb-4">Reports in the Last 24 Hours</h2>
       <Line data={data} />
     </div>
   );
